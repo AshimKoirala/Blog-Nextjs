@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function CreatePost(){
     return(
         <div className="container mx-auto p-4">

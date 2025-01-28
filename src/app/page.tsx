@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const posts = [
@@ -31,7 +32,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex-1">
-            <img
+            <Image
               src="./favicon.ico"
               alt="Featured Post"
               className="rounded-lg shadow-md"
