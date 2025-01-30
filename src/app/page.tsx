@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import favicon from './favicon.ico';
 
 const posts = [
   { id: '1', title: 'Post 1', content: 'This is the content of post 1.' },
@@ -8,8 +9,6 @@ const posts = [
   { id: '4', title: 'Post 4', content: 'This is the content of post 4.' },
   { id: '5', title: 'Post 5', content: 'This is the content of post 5.' },
   { id: '6', title: 'Post 6', content: 'This is the content of post 6.' },
-  { id: '7', title: 'Post 7', content: 'This is the content of post 7.' },
-  { id: '8', title: 'Post 8', content: 'This is the content of post 8.' },
 ];
 
 export default function Home() {
@@ -33,34 +32,12 @@ export default function Home() {
           </div>
           <div className="flex-1">
             <Image
-              src="./favicon.ico"
+              src={favicon}
+              width={20}
               alt="Featured Post"
               className="rounded-lg shadow-md"
             />
           </div>
-        </div>
-      </div>
-
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Explore Categories</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {['Technology', 'Lifestyle', 'Travel', 'Health'].map((category, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <h3 className="text-xl font-semibold mb-2">{category}</h3>
-              <p className="text-gray-700">
-                Explore our latest posts in the {category} category.
-              </p>
-              <Link
-                href={`/categories/${category.toLowerCase()}`}
-                className="text-blue-500 mt-4 inline-block"
-              >
-                View Posts →
-              </Link>
-            </div>
-          ))}
         </div>
       </div>
 
